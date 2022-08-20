@@ -1,0 +1,131 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+@mixin flex{
+   display: flex;
+   align-items: center;
+}
+$softRed :  hsl(10, 79%, 65%);
+$cyan : hsl(186, 34%, 60%);
+$darkBrown : hsl(25, 47%, 15%);
+$medBrown :hsl(28, 10%, 53%);
+$crean: hsl(26, 100%, 93%);
+$paleOrange:hsl(29, 100%, 95%);
+
+body{
+   @include flex();
+   min-height: 100vh;
+   flex-direction: column;
+   justify-content: center;
+   background-color: $paleOrange;
+}
+.container{
+   width: 22rem;
+   p{
+      font-size: 14px;
+   }
+   
+}
+.container-head{
+   background-image: url("./images/logo.svg");
+   background-repeat: no-repeat;
+   background-color: $softRed;
+   color: white;
+   background-position: 90% 50%;
+   padding: 1rem;
+   
+   border-radius: 1rem;
+}
+
+.container-body{
+   margin-top: 1rem;
+   background-color: white;
+   border-radius: 1rem;
+   padding: 1rem;
+   p{
+      color:$medBrown;
+   }
+
+}
+.bar-chart{
+   margin: 0 0 1rem 0;
+}
+hr{
+   outline: none;
+   height: 1px;
+   border: none;
+   background-color: $crean;
+}
+.footer{
+   margin: 1rem 0 1rem 0;
+
+   .monthly-price{
+      display: grid;
+      grid-template-columns: repeat(2,50%);
+      align-items: center;
+   }
+}
+.monthly-percentage{
+   h4,p{
+      text-align: right;
+   }
+   justify-self: end;
+}
+.bar-chart{
+   margin: 1rem 0;
+   //display: grid;
+   //grid-template-columns: repeat(7 , minmax(2rem  ,4rem));
+   @include flex();
+   align-items: end;
+   justify-content: space-evenly;
+}
+.bar-container{
+   @include flex();
+   flex-direction: column;
+   
+}
+.bar{
+   height: 96px;
+   width: 2rem;
+   border-radius: 0.25rem;
+   margin-bottom: 0.5rem;
+   margin-top: 3rem;
+   background-color: red;
+   position: relative;
+  
+}
+.bar[title]:hover::after{
+   position: absolute;
+   content: attr(title);
+   
+   background-color: black;
+   color:white;
+   border-radius: 0.25rem;
+   top: -2rem;
+   left: 50%;
+   padding: 0.25rem;
+   transform: translate(-50%,0);
+}
+.soft-red{
+   background-color: $softRed;
+}
+.cyan{
+   background-color:$cyan ;
+}
+.pale-orange{
+   background-color: rgb(246, 127, 83);
+}
+.attribution {
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+   color: hsl(228, 45%, 44%); 
+}
+@media screen and (max-width:480px) {
+   .container{
+      width: 90vw;
+   }
+}

@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  background-color: hsl(29deg, 100%, 95%);
+}
+
+.container {
+  width: 22rem;
+}
+.container p {
+  font-size: 14px;
+}
+
+.container-head {
+  background-image: url("./images/logo.svg");
+  background-repeat: no-repeat;
+  background-color: hsl(10deg, 79%, 65%);
+  color: white;
+  background-position: 90% 50%;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.container-body {
+  margin-top: 1rem;
+  background-color: white;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+.container-body p {
+  color: hsl(28deg, 10%, 53%);
+}
+
+.bar-chart {
+  margin: 0 0 1rem 0;
+}
+
+hr {
+  outline: none;
+  height: 1px;
+  border: none;
+  background-color: hsl(26deg, 100%, 93%);
+}
+
+.footer {
+  margin: 1rem 0 1rem 0;
+}
+.footer .monthly-price {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  align-items: center;
+}
+
+.monthly-percentage {
+  justify-self: end;
+}
+.monthly-percentage h4, .monthly-percentage p {
+  text-align: right;
+}
+
+.bar-chart {
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  align-items: end;
+  justify-content: space-evenly;
+}
+
+.bar-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.bar {
+  height: 96px;
+  width: 2rem;
+  border-radius: 0.25rem;
+  margin-bottom: 0.5rem;
+  margin-top: 3rem;
+  background-color: red;
+  position: relative;
+}
+
+.bar[title]:hover::after {
+  position: absolute;
+  content: attr(title);
+  background-color: black;
+  color: white;
+  border-radius: 0.25rem;
+  top: -2rem;
+  left: 50%;
+  padding: 0.25rem;
+  transform: translate(-50%, 0);
+}
+
+.soft-red {
+  background-color: hsl(10deg, 79%, 65%);
+}
+
+.cyan {
+  background-color: hsl(186deg, 34%, 60%);
+}
+
+.pale-orange {
+  background-color: rgb(246, 127, 83);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228deg, 45%, 44%);
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    width: 90vw;
+  }
+}/*# sourceMappingURL=style.css.map */
